@@ -1,11 +1,11 @@
 import React from 'react';
+import Adapter from 'enzyme-adapter-react-16';
+import { configure, shallow } from 'enzyme';
 import App from '../src/components/app';
 
-import { configure, shallow } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
 configure({ adapter: new Adapter() });
 
-test(`Should contain the title 'Hello, World'`, () => {
+test('Should contain the title "Hello, World"', () => {
   const wrapper = shallow(<App />);
   expect(wrapper.find('#title').text()).toBe('Hello, World');
 });
