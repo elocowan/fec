@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack -d -w",
+    "build": "webpack -d",
     "test": "jest --coverage",
     "start": "live-server ./public"
   },
